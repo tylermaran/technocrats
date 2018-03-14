@@ -1,2 +1,0 @@
-# technocrats
-Project 2
