@@ -1,0 +1,28 @@
+{
+  "name": "technocrats",
+  "version": "1.0.0",
+  "description": "best app ever",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tylermaran/technocrats.git"
+  },
+  "keywords": [
+    "best",
+    "app",
+    "ever"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tylermaran/technocrats/issues"
+  },
+  "homepage": "https://github.com/tylermaran/technocrats#readme",
+  "dependencies": {
+    "dotenv": "^5.0.1"
+  }
+}
