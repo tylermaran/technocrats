@@ -7,7 +7,7 @@ module.exports = function(app) {
 
   //Routes for login page. GET existing account & POST new account
 
-  app.get("api/users", function(req, res) {
+  app.get("api/:users?", function(req, res) {
     User.findAll({}).then(function(result) {
       return res.json(result);
     });
