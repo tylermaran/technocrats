@@ -6,9 +6,9 @@ var bodyParser = require("body-parser");
 // Sets up the Express App
 var app = express();
 var PORT = process.env.PORT || 8080;
-
+ 
 // Requiring our models for syncing
-var db = require("./app/models");
+var db = require("./app/models/broker.js");
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));

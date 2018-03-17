@@ -1,5 +1,5 @@
 // Requiring our models for syncing
-var User = require("../models/user.js"); //FILE NAME MAY DIFFER
+var User = require("../models/broker.js"); //FILE NAME MAY DIFFER
 
 // Routes
 // =============================================================
@@ -24,19 +24,19 @@ module.exports = function(app) {
 
 // =============================================================
 
-  app.get(/*ROUTE GOES HERE*/, function(req, res) {
-    /*SEQUELIZE CODE GOES HERE*/
-  });
-
-  app.post(/*ROUTE GOES HERE*/, function(req, res) {
-    /*SEQUELIZE CODE GOES HERE*/
-  });
-
-  app.delete(/*ROUTE GOES HERE*/, function(req, res) {
-    /*SEQUELIZE CODE GOES HERE*/
-  });
-
-  app.put(/*ROUTE GOES HERE*/, function(req, res) {
-    /*SEQUELIZE CODE GOES HERE*/
-  });
+  // app.get(/*ROUTE GOES HERE*/, function(req, res) {
+  //   /*SEQUELIZE CODE GOES HERE*/
+  // });
+  //
+  // app.post(/*ROUTE GOES HERE*/, function(req, res) {
+  //   /*SEQUELIZE CODE GOES HERE*/
+  // });
+  //
+  // app.delete(/*ROUTE GOES HERE*/, function(req, res) {
+  //   /*SEQUELIZE CODE GOES HERE*/
+  // });
+  //
+  // app.put(/*ROUTE GOES HERE*/, function(req, res) {
+  //   /*SEQUELIZE CODE GOES HERE*/
+  // });
 }
