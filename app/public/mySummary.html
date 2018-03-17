@@ -2,95 +2,116 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>TECH SQUARE</title>
-    <!-- MATERIALIZEjs Styling for Improving the Aesthetics -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-    <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css"-->
-    <!-- Font Awesome CSS Icons (For cool glyphicons) -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <!-- Style to fix the issue of text extending past panel length -->
-    <style>
-        .panel-body a {
-            word-break: break-all;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>TECH SQUARE</title>
+  <!-- MATERIALIZEjs Styling for Improving the Aesthetics -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css"-->
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!-- Style to fix the issue of text extending past panel length -->
+  <style>
+  .panel-body a {
+    word-break: break-all;
+  }
+  </style>
+  <!--Custom CSS-->
+  <link rel='stylesheet' type='text/css' href='css/style.css'>
 </head>
 
 <body>
-    <!-- Main Bootstrap Search -->
-    <div class="container">
-        <!-- Jumbotron for Title #20315A-->
-        <div class="card-panel" style="background-color: #008080 ; color: white;">
-            <h1 class="center-align"><strong><i class="fa fa-bitcoin"></i>&nbsp;TECH Square Investments</strong></h1>
-            <h4 class="center-align">The Bank for New Ideas.</h4>
-            <br>
-            <h5 id="targetname">&nbsp;</h5>
+  <!--Navbar-->
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">TSI</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Transactions</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Transactions</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Main Bootstrap Search -->
+  <div class="container">
+    <!-- Jumbotron for Title #20315A-->
+    <div class="card-panel" style="background-color: #008080 ; color: white;">
+      <h1 class="center-align"><strong><i class="fa fa-bitcoin"></i>&nbsp;TECH Square Investments</strong></h1>
+      <h4 class="center-align">The Bank for New Ideas.</h4>
+      <br>
+      <h5 id="targetname">&nbsp;</h5>
+    </div>
+    <div class="row">
+      <div class="col s4">
+        <div class="card-panel">
+          <h5 class="truncate"><strong><i class="fa fa-bitcoin"></i>&nbsp;Hello, John Smith</strong></h5>
         </div>
-        <div class="row">
-            <div class="col s4">
-                <div class="card-panel">
-                    <h5 class="truncate"><strong><i class="fa fa-bitcoin"></i>&nbsp;Hello, John Smith</strong></h5>
-                </div>
-            </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12">
+
+        <div class="panel panel-primary">
+          <!-- Panel Heading for the retrieved articles box -->
+
+          <h5 class="panel-title"><strong><i class="fa fa-table"></i> INVESTMENT ACCOUNTS : </strong></h5>
+
+          <!-- This main panel will hold each of the resulting articles -->
+          <div class="panel-body" id="well-section">
+            <table class="striped">
+              <thead>
+                <tr>
+                  <th scope="col">ACCOUNT NUMBER</th>
+                  <th scope="col">DESCRIPTION</th>
+                  <th scope="col">ACCOUNT TYPE</th>
+                  <th scope="col">BALANCE</th>
+                </tr>
+              </thead>
+              <!-- Add ACCOUNT data to the table body below -->
+              <tbody id="targetbody"></tbody>
+            </table>
+          </div>
         </div>
-        <div class="row">
-            <div class="col s12">
-
-                <div class="panel panel-primary">
-                    <!-- Panel Heading for the retrieved articles box -->
-
-                    <h5 class="panel-title"><strong><i class="fa fa-table"></i> INVESTMENT ACCOUNTS : </strong></h5>
-
-                    <!-- This main panel will hold each of the resulting articles -->
-                    <div class="panel-body" id="well-section">
-                        <table class="striped">
-                            <thead>
-                                <tr>
-                                    <th scope="col">ACCOUNT NUMBER</th>
-                                    <th scope="col">DESCRIPTION</th>
-                                    <th scope="col">ACCOUNT TYPE</th>
-                                    <th scope="col">BALANCE</th>
-                                </tr>
-                            </thead>
-                            <!-- Add ACCOUNT data to the table body below -->
-                            <tbody id="targetbody"></tbody>
-                        </table>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col s4">
-            <br>
-            <!-- Stock Ticker API -->
-            <div class="panel panel-primary">
-                <div class="panel-heading">
-                    <h5 class="panel-title"><strong><i class="fa  fa-money"></i> Markets :</strong></h5>
-                </div>
-                <div>
-                    <!--img src="http://openweathermap.org/img/w/01n.png" class="img-responsive" id="atlicon"-->
-                    <img src="" class="img-responsive" id="atlimg">
-                    <p id="atlweather"> </p>
-                    <br>
-                </div>
-            </div>
-        </div>
-
-        <!-- Footer Region -->
-        <div class="row">
-            <div class="col s12">
-                <!-- Line Break followed by closing -->
-                <hr>
-                <h7 class="text-center"><small>Created by Team2: Technocrats <i class="fa fa-stack-overflow"></i></small></h7>
-            </div>
-        </div>
+      </div>
     </div>
 
-    <!-- jQuery JS -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Code to the JavaScript File -->
-    <script src="acctList.js"></script>
+    <div class="col s4">
+      <br>
+      <!-- Stock Ticker API -->
+      <div class="panel panel-primary">
+        <div class="panel-heading">
+          <h5 class="panel-title"><strong><i class="fa  fa-money"></i> Markets :</strong></h5>
+        </div>
+        <div>
+          <!--img src="http://openweathermap.org/img/w/01n.png" class="img-responsive" id="atlicon"-->
+          <img src="" class="img-responsive" id="atlimg">
+          <p id="atlweather"> </p>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Region -->
+    <div class="row">
+      <div class="col s12">
+        <!-- Line Break followed by closing -->
+        <hr>
+        <h7 class="text-center"><small>Created by Team2: Technocrats <i class="fa fa-stack-overflow"></i></small></h7>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery JS -->
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!--Materialize JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- Code to the JavaScript Files -->
+  <script type='text/javascript' src='js/acctList.js'></script>
+  <script type='text/javascript' src='js/view.js'></script>
 </body>
 
 </html>

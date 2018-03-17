@@ -9,7 +9,7 @@ $("#run-search").on("click", function(event) {
   }
 
   // send an AJAX POST-request with jQuery
-  $.post("api/new") {
+  $.post("api/new")
     .then(function(data) {
       alert("User added.");
   });
