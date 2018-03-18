@@ -23,18 +23,12 @@ module.exports = function(app) {
 
   });
 
-  app.get("/api/:param?", function(req, res) {
-    res.render("index")
-    console.log(param);
-    console.log(res);
-    console.log(req);
-  });
-  // index route loads view.html
+
   app.get("/acctList.js", function(req, res) {
 
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../public/js/acctList.js"));
 
 
   });
@@ -43,7 +37,7 @@ module.exports = function(app) {
 
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../public/js/add.js"));
 
 
   });
@@ -52,7 +46,7 @@ module.exports = function(app) {
 
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../public/js/login.js"));
 
 
   });
@@ -61,7 +55,7 @@ module.exports = function(app) {
 
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-    res.render("index");
+    res.sendFile(path.join(__dirname, "../public/js/view.js"));
 
 
   });
