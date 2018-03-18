@@ -1,6 +1,15 @@
 .card {
   margin-top: 30px;
-  border-radius: 15px;
+  border-radius: 5px;
+  color: #2B3856;
+}
+
+.card-content {
+
+}
+
+#enrollBtn {
+  margin: auto;
 }
 
 /*Background video*/
