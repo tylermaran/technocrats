@@ -2,10 +2,15 @@
   margin-top: 30px;
   border-radius: 5px;
   color: #2B3856;
+  font-family: "Montserrat";
 }
 
-.card-content {
+.card-title {
+  color: #2d3e4f;
+}
 
+#slogan {
+  color: #f89b57;
 }
 
 #enrollBtn {

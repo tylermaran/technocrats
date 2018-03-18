@@ -1,6 +1,4 @@
-body {
-  background-color: #F5F4F2;
-}
+/* #f89b57 */
 
 nav {
   font-family: "Roboto";
@@ -8,21 +6,34 @@ nav {
   background-color: #2d3e4f;
   padding-left: 30px;
   padding-right: 30px;
-  border-top: 2px solid #f89b57;
-}
-
-.container {
-  position: relative;
-  top: 20px;
+  border-top: 2px solid #008080;
 }
 
 #jumbotron {
-  font-family: "Noto Serif";
-  border-radius: 5px;
+  padding-top: 50px;
+  font-family: "Montserrat";
+  background-color: white;
+  height: 350px;
+  color: #2d3e4f;
+}
+
+#jumbotron h4 {
+  color: #f89b57;
 }
 
 #title {
   font-size: 54px;
+}
+
+.container {
+  padding-left: 10%;
+  padding-right: 10%;
+  width: 100%;
+  /* position: relative;
+  top: 40px; */
+  background-color: #E5E4E2;
+  padding-top: 50px;
+  font-family: "Montserrat";
 }
 
 #welcomePanel {
