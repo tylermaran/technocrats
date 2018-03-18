@@ -3,13 +3,16 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>TECH SQUARE</title>
+  <title>TSI</title>
   <!-- MATERIALIZEjs Styling for Improving the Aesthetics -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css"-->
   <!-- Font Awesome CSS Icons (For cool glyphicons) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
   <!-- Style to fix the issue of text extending past panel length -->
   <style>
   .panel-body a {
@@ -22,33 +25,33 @@
 
 <body>
   <!--Navbar-->
-  <nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">TSI</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Transactions</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Transactions</a></li>
-      </ul>
-    </div>
-  </nav>
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">TSI</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Transactions</a></li>
+        </ul>
+        <ul class="side-nav" id="mobile-demo">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">Transactions</a></li>
+        </ul>
+      </div>
+    </nav>
   <!-- Main Bootstrap Search -->
   <div class="container">
     <!-- Jumbotron for Title #20315A-->
-    <div class="card-panel" style="background-color: #008080 ; color: white;">
-      <h1 class="center-align"><strong><i class="fa fa-bitcoin"></i>&nbsp;TECH Square Investments</strong></h1>
+    <div class="card-panel" id="jumbotron" style="background-color: #008080 ; color: white;">
+      <h1 class="center-align" id="title"><strong><!--<i class="fa fa-bitcoin"></i>-->&nbsp;Tech Square Investments</strong></h1>
       <h4 class="center-align">The Bank for New Ideas.</h4>
       <br>
       <h5 id="targetname">&nbsp;</h5>
     </div>
     <div class="row">
       <div class="col s4">
-        <div class="card-panel">
-          <h5 class="truncate"><strong><i class="fa fa-bitcoin"></i>&nbsp;Hello, John Smith</strong></h5>
+        <div id="welcomePanel" class="card-panel">
+          <h5><strong><!--<i class="fa fa-bitcoin"></i>-->Hello, John Smith</strong></h5>
         </div>
       </div>
     </div>
@@ -58,11 +61,11 @@
         <div class="panel panel-primary">
           <!-- Panel Heading for the retrieved articles box -->
 
-          <h5 class="panel-title"><strong><i class="fa fa-table"></i> INVESTMENT ACCOUNTS : </strong></h5>
+          <h5 class="panel-title"><strong><i class="fa fa-table"></i> Investment Accounts : </strong></h5>
 
           <!-- This main panel will hold each of the resulting articles -->
           <div class="panel-body" id="well-section">
-            <table class="striped">
+            <table class="highlight white">
               <thead>
                 <tr>
                   <th scope="col">ACCOUNT NUMBER</th>
