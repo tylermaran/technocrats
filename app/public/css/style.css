@@ -9,6 +9,10 @@ nav {
   border-top: 2px solid #008080;
 }
 
+.side-nav {
+  font-family: "Montserrat";
+}
+
 #jumbotron {
   padding-top: 50px;
   font-family: "Montserrat";
@@ -34,6 +38,7 @@ nav {
   background-color: #E5E4E2;
   padding-top: 50px;
   font-family: "Montserrat";
+  height: 100%;
 }
 
 #welcomePanel {
