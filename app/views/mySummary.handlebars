@@ -1,0 +1,88 @@
+<!--Navbar-->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">TSI</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Transactions</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<ul class="side-nav" id="mobile-demo">
+  <li><a href="#">Home</a></li>
+  <li><a href="#">Transactions</a></li>
+</ul>
+<!-- Jumbotron for Title #20315A-->
+<div  id="jumbotron"> <!--style="background-color: #008080 ; color: white;">-->
+  <h1 class="center-align" id="title"><strong><!--<i class="fa fa-bitcoin"></i>-->&nbsp;Tech Square Investments</strong></h1>
+  <h4 class="center-align">The Bank for New Ideas.</h4>
+  <br>
+  <h5 id="targetname">&nbsp;</h5>
+</div>
+<!-- Main Bootstrap Search -->
+<div class="container">
+  <div class="row">
+    <div class="col s4">
+      <div id="welcomePanel" class="card-panel">
+        <h5><strong><!--<i class="fa fa-bitcoin"></i>-->Hello, John Smith</strong></h5>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col s12">
+
+      <div class="panel panel-primary">
+        <!-- Panel Heading for the retrieved articles box -->
+
+        <h5 class="panel-title"><strong><i class="fa fa-table"></i> Investment Accounts : </strong></h5>
+
+        <!-- This main panel will hold each of the resulting articles -->
+        <div class="panel-body" id="well-section">
+          <table class="highlight white">
+            <thead>
+              <tr>
+                <th scope="col">ACCOUNT NUMBER</th>
+                <th scope="col">DESCRIPTION</th>
+                <th scope="col">ACCOUNT TYPE</th>
+                <th scope="col">BALANCE</th>
+              </tr>
+            </thead>
+            <!-- Add ACCOUNT data to the table body below -->
+            <tbody id="targetbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col s4">
+    <br>
+    <!-- Stock Ticker API -->
+    <div class="panel panel-primary">
+      <div class="panel-heading">
+        <h5 class="panel-title"><strong><i class="fa  fa-money"></i> Markets :</strong></h5>
+      </div>
+      <div>
+        <!--img src="http://openweathermap.org/img/w/01n.png" class="img-responsive" id="atlicon"-->
+        <img src="" class="img-responsive" id="atlimg">
+        <p id="atlweather"> </p>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer Region -->
+  <div class="row">
+    <div class="col s12">
+      <!-- Line Break followed by closing -->
+      <hr>
+      <h7 class="text-center"><small>Created by Team2: Technocrats <i class="fa fa-stack-overflow"></i></small></h7>
+    </div>
+  </div>
+</div>
+
+<script type='text/javascript' src='js/acctList.js'></script>
+<script type='text/javascript' src='js/view.js'></script>

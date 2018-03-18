@@ -11,18 +11,23 @@ module.exports = function(app) {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/loginStyle.css'>`
     }
 
-    res.render("login",sheets);
- 
+    res.render("login", sheets);
+
   });
+
+  app.get("/account-detail", function(req, res) {
+
+    res.render("acctDetail");
+  });
+
 
   // index route loads view.html
   app.get("/acctDetail.js", function(req, res) {
 
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-
     res.sendFile(path.join(__dirname, "../public/js/acctDetail.js"));
 
   });
+
 
 
   app.get("/loginStyle.css", function(req, res) {
@@ -34,14 +39,14 @@ module.exports = function(app) {
 
   });
 
-    app.get("/acctList.js", function(req, res) {
+  app.get("/acctList.js", function(req, res) {
 
-      // res.sendFile(path.join(__dirname, "../public/login.html"));
+    // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-      res.sendFile(path.join(__dirname, "../public/js/acctList.js"));
+    res.sendFile(path.join(__dirname, "../public/js/acctList.js"));
 
 
-    });
+  });
   // index route loads view.html
   app.get("/add.js", function(req, res) {
 
