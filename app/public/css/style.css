@@ -43,3 +43,12 @@ nav {
 table {
   border: 1px solid lightgrey;
 }
+
+th {
+  text-align: center;
+  width: 200px;
+}
+
+.balance {
+  color: #008080;
+}

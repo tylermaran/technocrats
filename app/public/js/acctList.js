@@ -46,7 +46,7 @@ var atlHumidity = "";
 // weatherDesc = weatherData[0].close;
 // picImg = weatherData.weather[0].icon;
 // picImgUrl = "https://openweathermap.org/img/w/" + picImg + ".png";
-// picImgUrl = "https://openweathermap.org/img/w/11d.png"; 
+// picImgUrl = "https://openweathermap.org/img/w/11d.png";
 // atlTemp = weatherData.main.temp;
 // atlHumidity = weatherData.main.humidity;
 
@@ -75,7 +75,7 @@ function runQuery(queryURLBase) {
     })
 
     .done(function(response) {
-        //form input variables 
+        //form input variables
         var acctdata = response;
 
 
@@ -92,11 +92,11 @@ function runQuery(queryURLBase) {
                     .append($('<td>').append(acctJsonDB[i].acct_id))
                     .append($('<td>').append(acctJsonDB[i].acct_desc))
                     .append($('<td>').append(acctJsonDB[i].acct_type))
-                    .append($('<td>').append(acctJsonDB[i].balance_amount))
+                    .append($('<td class="balance">').append(acctJsonDB[i].balance_amount))
 
                 ) // <tr>
 
-            // } // IF Station === 
+            // } // IF Station ===
 
         } //FOR LOOP
 
