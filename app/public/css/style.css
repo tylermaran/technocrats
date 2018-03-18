@@ -1,4 +1,6 @@
-/* #f89b57 */
+body {
+  color: #2d3e4f;
+}
 
 nav {
   font-family: "Montserrat";
@@ -18,7 +20,6 @@ nav {
   font-family: "Montserrat";
   background-color: white;
   height: 350px;
-  color: #2d3e4f;
 }
 
 #jumbotron h4 {
