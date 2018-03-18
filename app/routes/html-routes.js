@@ -9,7 +9,7 @@ module.exports = function(app) {
 
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-    res.render("index");
+    res.render("login");
 
 
   });
@@ -20,7 +20,7 @@ module.exports = function(app) {
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
     res.sendFile(path.join(__dirname, "../public/js/acctDetail.js"));
-
+ 
   });
 
 
