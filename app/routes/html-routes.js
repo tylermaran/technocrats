@@ -7,11 +7,12 @@ module.exports = function(app) {
   // index route loads view.html
   app.get("/", function(req, res) {
 
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
+    var sheets = {
+      stylesheet: `<link rel='stylesheet' type='text/css' href='/loginStyle.css'>`
+    }
 
-    res.render("login");
-
-
+    res.render("login",sheets);
+ 
   });
 
   // index route loads view.html
@@ -20,18 +21,27 @@ module.exports = function(app) {
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
     res.sendFile(path.join(__dirname, "../public/js/acctDetail.js"));
- 
+
   });
 
 
-  app.get("/acctList.js", function(req, res) {
+  app.get("/loginStyle.css", function(req, res) {
 
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-    res.sendFile(path.join(__dirname, "../public/js/acctList.js"));
+    res.sendFile(path.join(__dirname, "../public/css/loginStyle.css"));
 
 
   });
+
+    app.get("/acctList.js", function(req, res) {
+
+      // res.sendFile(path.join(__dirname, "../public/login.html"));
+
+      res.sendFile(path.join(__dirname, "../public/js/acctList.js"));
+
+
+    });
   // index route loads view.html
   app.get("/add.js", function(req, res) {
 
