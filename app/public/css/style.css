@@ -8,7 +8,6 @@ nav {
   background-color: #2d3e4f;
   padding-left: 30px;
   padding-right: 30px;
-  border-top: 2px solid #008080;
 }
 
 .side-nav {
@@ -44,6 +43,7 @@ nav {
 
 #welcomePanel {
   width: 300px;
+  color: #008080;
 }
 
 table {
@@ -57,4 +57,8 @@ th {
 
 .balance {
   color: #008080;
+}
+
+#trxTable {
+  margin-top: 20px;
 }
