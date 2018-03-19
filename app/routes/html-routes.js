@@ -19,7 +19,7 @@ module.exports = function(app) {
     }
     res.render("mySummary", sheets);
   });
-
+ 
   //route to acctDetail.handlebars
   app.get("/account-detail", function(req, res) {
     var sheets = {
