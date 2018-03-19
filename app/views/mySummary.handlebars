@@ -5,29 +5,29 @@
       <a href="#" class="brand-logo">TSI</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="active"><a href="#">Home</a></li>
-        <li><a href="#">Transactions</a></li>
+        <li class="active"><a href="/summary">Home</a></li>
+        <li><a href="/account-detail">Transactions</a></li>
       </ul>
     </div>
   </nav>
 </div>
 <ul class="side-nav" id="mobile-demo">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Transactions</a></li>
+  <li><a href="/summary">Home</a></li>
+  <li><a href="/account-detail">Transactions</a></li>
 </ul>
 <!-- Jumbotron for Title #20315A-->
-<div  id="jumbotron"> <!--style="background-color: #008080 ; color: white;">-->
-  <h1 class="center-align" id="title"><strong><!--<i class="fa fa-bitcoin"></i>-->&nbsp;Tech Square Investments</strong></h1>
+<div  id="jumbotron">
+  <h1 class="center-align" id="title"><strong><!--<i class="fa fa-bitcoin"></i>-->Tech Square Investments</strong></h1>
   <h4 class="center-align">The Bank for New Ideas.</h4>
   <br>
   <h5 id="targetname">&nbsp;</h5>
 </div>
-<!-- Main Bootstrap Search -->
+<!-- Container -->
 <div class="container">
   <div class="row">
     <div class="col s4">
       <div id="welcomePanel" class="card-panel">
-        <h5><strong><!--<i class="fa fa-bitcoin"></i>-->Hello, John Smith</strong></h5>
+        <h5><strong><!--<i class="fa fa-bitcoin"></i>-->Hello, John</strong></h5>
       </div>
     </div>
   </div>
@@ -35,11 +35,9 @@
     <div class="col s12">
 
       <div class="panel panel-primary">
-        <!-- Panel Heading for the retrieved articles box -->
 
         <h5 class="panel-title"><strong><i class="fa fa-table"></i> Investment Accounts : </strong></h5>
 
-        <!-- This main panel will hold each of the resulting articles -->
         <div class="panel-body" id="well-section">
           <table class="highlight white">
             <thead>
@@ -79,10 +77,16 @@
     <div class="col s12">
       <!-- Line Break followed by closing -->
       <hr>
-      <h7 class="text-center"><small>Created by Team2: Technocrats <i class="fa fa-stack-overflow"></i></small></h7>
+      <h7 class="text-center"><small>Created by Team2: Technocrats <!--<i class="fa fa-stack-overflow"></i></small>--></h7>
     </div>
   </div>
 </div>
 
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!--Materialize JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Code to the JavaScript Files -->
 <script type='text/javascript' src='js/acctList.js'></script>
-<script type='text/javascript' src='js/view.js'></script>
+<!--Nav feature-->
+<script type='text/javascript'>$(".button-collapse").sideNav();</script>

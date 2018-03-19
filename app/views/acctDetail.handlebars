@@ -1,57 +1,59 @@
-<!-- Main Bootstrap Search -->
+<!--Navbar-->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">TSI</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/summary">Home</a></li>
+        <li class="active"><a href="/account-detail">Transactions</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<ul class="side-nav" id="mobile-demo">
+  <li><a href="/summary">Home</a></li>
+  <li><a href="/account-detail">Transactions</a></li>
+</ul>
+
+<!--Container-->
 <div class="container">
-  <!-- Jumbotron for Title #20315A-->
-  <div class="card-panel" style="background-color: #008080 ; color: white;">
-    <h1 class="center-align"><strong><i class="fa fa-bitcoin"></i>&nbsp;TECH Square Investments</strong></h1>
-    <h4 class="center-align">The Bank for New Ideas.</h4>
-    <br>
-    <h5 id="targetname">&nbsp;</h5>
-  </div>
   <div class="row">
-    <div class="col s4">
-      <div class="card-panel">
-        <h5 class="truncate"><strong><i class="fa fa-bitcoin"></i>&nbsp;Hello, John Smith</strong></h5>
+      <div class="col s12">
+
+          <div class="panel panel-primary">
+
+              <h5 class="panel-title"><strong><i class="fa fa-table" id="trxTable"></i> Transactions : </strong></h5>
+
+              <div class="panel-body" id="well-section">
+                  <table class="highlight white">
+                      <thead>
+                          <tr>
+                              <th scope="col">TRANSACTION</th>
+                              <th scope="col">ACCOUNT</th>
+                              <th scope="col">DATE/TIME</th>
+                              <th scope="col">SYMBOL</th>
+                              <th scope="col">DESCRIPTION</th>
+                              <th scope="col">QUOTE</th>
+                              <th scope="col">CHANGE</th>
+                              <th scope="col">QUANTITY</th>
+                              <th scope="col">COST PER SHARE</th>
+                              <th scope="col">COST BASIS</th>
+                              <th scope="col">GAIN/LOSS</th>
+                              <th scope="col">MARKET VALUE</th>
+                          </tr>
+                      </thead>
+                      <!-- Add ACCOUNT data to the table body below -->
+                      <tbody id="targetbody"></tbody>
+                  </table>
+              </div>
+          </div>
       </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col s12">
-
-      <div class="panel panel-primary">
-        <!-- Panel Heading for the retrieved articles box -->
-
-        <h5 class="panel-title"><strong><i class="fa fa-table"></i> ACCOUNT NUMBER (blank) TRANSACTION DETAILS : </strong></h5>
-
-        <!-- This main panel will hold each of the resulting articles -->
-        <div class="panel-body" id="well-section">
-          <table class="striped">
-            <thead>
-              <tr>
-                <th scope="col">TRANSACTION</th>
-                <th scope="col">ACCOUNT</th>
-                <th scope="col">DATE/TIME</th>
-                <th scope="col">SYMBOL</th>
-                <th scope="col">DESCRIPTION</th>
-                <th scope="col">QUOTE</th>
-                <th scope="col">CHANGE</th>
-                <th scope="col">QUANTITY</th>
-                <th scope="col">COST PER SHARE</th>
-                <th scope="col">COST BASIS</th>
-                <th scope="col">GAIN/LOSS</th>
-                <th scope="col">MARKET VALUE</th>
-              </tr>
-            </thead>
-            <!-- Add ACCOUNT data to the table body below -->
-            <tbody id="targetbody"></tbody>
-          </table>
-        </div>
-      </div>
-    </div>
   </div>
 
   <div class="col s4">
-    <br>
-    <!-- Stock Ticker API -->
+      <br>
+      <!-- Stock Ticker API -->
 
   </div>
 
@@ -60,9 +62,15 @@
     <div class="col s12">
       <!-- Line Break followed by closing -->
       <hr>
-      <h7 class="text-center"><small>Created by Team2: Technocrats <i class="fa fa-stack-overflow"></i></small></h7>
+      <h7 class="text-center"><small>Created by Team2: Technocrats <!--<i class="fa fa-stack-overflow"></i></small>--></h7>
     </div>
   </div>
 </div>
-
-<script src="acctDetail.js"></script>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!--Materialize JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Code to the JavaScript Files -->
+<script type='text/javascript' src='js/acctDetail.js'></script>
+<!--Nav feature-->
+<script type='text/javascript'>$(".button-collapse").sideNav();</script>

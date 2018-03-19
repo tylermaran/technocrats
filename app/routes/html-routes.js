@@ -4,84 +4,51 @@ var path = require("path");
 // =============================================================
 module.exports = function(app) {
 
-  // index route loads view.html
+  // index route loads login.html
   app.get("/", function(req, res) {
-
     var sheets = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/login.css'>`
     }
-
     res.render("login", sheets);
-
   });
 
+  //route to mySummary.html
+  app.get("/summary", function(req, res) {
+    var sheets = {
+      stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`
+    }
+    res.render("mySummary", sheets);
+  });
+
+  //route to acctDetail.html
   app.get("/account-detail", function(req, res) {
-
-    res.render("acctDetail");
+    var sheets = {
+      stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`
+    }
+    res.render("acctDetail", sheets);
   });
 
-
-  // index route loads view.html
-  app.get("/acctDetail.js", function(req, res) {
-
-    res.sendFile(path.join(__dirname, "../public/js/acctDetail.js"));
-
+  //loads CSS
+  //===================================================================
+  app.get("/style.css", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/css/style.css"));
   });
-
-
 
   app.get("/login.css", function(req, res) {
-
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-
     res.sendFile(path.join(__dirname, "../public/css/login.css"));
+  });
 
-
+  //loads JS
+  //===================================================================
+  app.get("/acctDetail.js", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/js/acctDetail.js"));
   });
 
   app.get("/acctList.js", function(req, res) {
-
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-
     res.sendFile(path.join(__dirname, "../public/js/acctList.js"));
-
-
   });
-  // index route loads view.html
-  // app.get("/add.js", function(req, res) {
-  //
-  //   // res.sendFile(path.join(__dirname, "../public/login.html"));
-  //
-  //   res.sendFile(path.join(__dirname, "../public/js/add.js"));
-  //
-  //
-  // });
-  // index route loads view.html
+
   app.get("/login.js", function(req, res) {
-
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-
     res.sendFile(path.join(__dirname, "../public/js/login.js"));
-
-
   });
-  // index route loads view.html
-  // app.get("/view.js", function(req, res) {
-  //
-  //   // res.sendFile(path.join(__dirname, "../public/login.html"));
-  //
-  //   res.sendFile(path.join(__dirname, "../public/js/view.js"));
-  //
-  //
-  // });
-
-  // add route loads the add.html page,
-  // where users can add new users to the db
-  // app.get("/add", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../public/add.html"));
-  // });
-
-
-
-
 };
