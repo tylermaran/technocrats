@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
 
     var sheets = {
-      stylesheet: `<link rel='stylesheet' type='text/css' href='/loginStyle.css'>`
+      stylesheet: `<link rel='stylesheet' type='text/css' href='/login.css'>`
     }
 
     res.render("login", sheets);
@@ -30,11 +30,11 @@ module.exports = function(app) {
 
 
 
-  app.get("/loginStyle.css", function(req, res) {
+  app.get("/login.css", function(req, res) {
 
     // res.sendFile(path.join(__dirname, "../public/login.html"));
 
-    res.sendFile(path.join(__dirname, "../public/css/loginStyle.css"));
+    res.sendFile(path.join(__dirname, "../public/css/login.css"));
 
 
   });
@@ -48,14 +48,14 @@ module.exports = function(app) {
 
   });
   // index route loads view.html
-  app.get("/add.js", function(req, res) {
-
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-
-    res.sendFile(path.join(__dirname, "../public/js/add.js"));
-
-
-  });
+  // app.get("/add.js", function(req, res) {
+  //
+  //   // res.sendFile(path.join(__dirname, "../public/login.html"));
+  //
+  //   res.sendFile(path.join(__dirname, "../public/js/add.js"));
+  //
+  //
+  // });
   // index route loads view.html
   app.get("/login.js", function(req, res) {
 
@@ -66,14 +66,14 @@ module.exports = function(app) {
 
   });
   // index route loads view.html
-  app.get("/view.js", function(req, res) {
-
-    // res.sendFile(path.join(__dirname, "../public/login.html"));
-
-    res.sendFile(path.join(__dirname, "../public/js/view.js"));
-
-
-  });
+  // app.get("/view.js", function(req, res) {
+  //
+  //   // res.sendFile(path.join(__dirname, "../public/login.html"));
+  //
+  //   res.sendFile(path.join(__dirname, "../public/js/view.js"));
+  //
+  //
+  // });
 
   // add route loads the add.html page,
   // where users can add new users to the db

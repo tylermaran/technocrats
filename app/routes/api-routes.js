@@ -1,5 +1,5 @@
 // Requiring our models for syncing
-var User = require("../models/broker.js"); //FILE NAME MAY DIFFER
+var User = require("../models/broker.js");
 
 // Routes
 // =============================================================
