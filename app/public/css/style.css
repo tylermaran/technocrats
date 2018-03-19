@@ -1,5 +1,6 @@
 body {
   color: #2d3e4f;
+  background-color: #E5E4E2;
 }
 
 nav {
@@ -23,6 +24,7 @@ nav {
   font-family: "Montserrat";
   background-color: white;
   height: 350px;
+  width: 100%;
 }
 
 #jumbotron h4 {
