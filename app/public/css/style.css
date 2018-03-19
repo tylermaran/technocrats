@@ -2,6 +2,11 @@ body {
   color: #2d3e4f;
 }
 
+/*Style to fix the issue of text extending past panel length*/
+.panel-body a {
+  word-break: break-all;
+}
+
 nav {
   font-family: "Roboto";
   font-weight: 300;

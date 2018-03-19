@@ -14,12 +14,6 @@
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Noto+Serif" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <!-- Style to fix the issue of text extending past panel length -->
-  <style>
-  .panel-body a {
-    word-break: break-all;
-  }
-  </style>
   <!--Custom CSS-->
   <link rel='stylesheet' type='text/css' href='css/style.css'>
 </head>
@@ -117,7 +111,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <!-- Code to the JavaScript Files -->
   <script type='text/javascript' src='js/acctList.js'></script>
-  <script type='text/javascript' src='js/view.js'></script>
+  <!--Nav feature-->
+  <script type='text/javascript'>$(".button-collapse").sideNav();</script>
 </body>
 
 </html>
