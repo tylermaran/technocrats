@@ -12,7 +12,7 @@ module.exports = function(app) {
     }
     res.render("login", items);
   });
-
+ 
   //route to mySummary.handlebars
   app.get("/summary", function(req, res) {
     var items = {
