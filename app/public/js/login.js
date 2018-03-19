@@ -46,7 +46,7 @@ $( document ).ready(function() {
     $.post("api/new")
     .then(function(data) {
 
-      //Open new user's account page
+      $("#enrollBtn").attr("href", "mySummary.html");
 
     });
 
