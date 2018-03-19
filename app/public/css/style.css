@@ -11,10 +11,11 @@ nav {
 }
 
 .brand-logo {
-  font-family: "Montserrat"
-}
-.side-nav {
   font-family: "Montserrat";
+}
+
+.side-nav {
+  font-family: "Roboto";
 }
 
 #jumbotron {
