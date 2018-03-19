@@ -4,7 +4,7 @@ var path = require("path");
 // =============================================================
 module.exports = function(app) {
 
-  // index route loads login.html
+  // index route loads login.handlebars
   app.get("/", function(req, res) {
     var sheets = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/login.css'>`
@@ -12,7 +12,7 @@ module.exports = function(app) {
     res.render("login", sheets);
   });
 
-  //route to mySummary.html
+  //route to mySummary.handlebars
   app.get("/summary", function(req, res) {
     var sheets = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`
@@ -20,7 +20,7 @@ module.exports = function(app) {
     res.render("mySummary", sheets);
   });
 
-  //route to acctDetail.html
+  //route to acctDetail.handlebars
   app.get("/account-detail", function(req, res) {
     var sheets = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`
