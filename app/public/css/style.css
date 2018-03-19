@@ -3,13 +3,16 @@ body {
 }
 
 nav {
-  font-family: "Montserrat";
+  font-family: "Roboto";
   font-weight: 300;
   background-color: #2d3e4f;
   padding-left: 30px;
   padding-right: 30px;
 }
 
+.brand-logo {
+  font-family: "Montserrat"
+}
 .side-nav {
   font-family: "Montserrat";
 }
@@ -37,7 +40,8 @@ nav {
   top: 40px; */
   background-color: #E5E4E2;
   padding-top: 50px;
-  font-family: "Montserrat";
+  font-family: "Roboto";
+  weight: 300;
   height: 100%;
 }
 
