@@ -4,19 +4,26 @@ body {
 
 .login {
   width: 50em;
-}
+  }
+
+  .card {
+    height: 32em;
+    margin-top: 30px;
+    border-radius: 5px;
+    color: #2B3856;
+    font-family: "Montserrat";
+  }
+
+  @media screen and (max-width: 1200px) {
+    .card {
+      height: 36em;
+    }
+  }
 
 @media screen and (max-width: 600px) {
   .login {
     width: 20em;
   }
-}
-
-.card {
-  margin-top: 30px;
-  border-radius: 5px;
-  color: #2B3856;
-  font-family: "Montserrat";
 }
 
 .card-title {
