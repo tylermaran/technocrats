@@ -1,5 +1,21 @@
 <!-- navbar -->
-{{> nav/nav-bar}}
+<!-- {{> nav/nav-bar}} -->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">TSI</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li class="active"><a href="/summary">Home</a></li>
+        <li class="nav-link"><a href="/account-detail">Transactions</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<ul class="side-nav" id="mobile-demo">
+  <li><a href="/summary">Home</a></li>
+  <li><a href="/account-detail">Transactions</a></li>
+</ul>
 <!-- Jumbotron for Title #20315A-->
 {{> jumbo/tron}}
 <!-- Container -->
@@ -69,4 +85,6 @@
 <!-- Code to the JavaScript Files -->
 <script type='text/javascript' src='js/acctList.js'></script>
 <!--Nav feature-->
-<script type='text/javascript'>$(".button-collapse").sideNav();</script>
+<script type='text/javascript'>
+  $(".button-collapse").sideNav();
+</script>
