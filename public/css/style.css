@@ -12,7 +12,7 @@ nav {
 }
 
 .brand-logo {
-  font-family: "Montserrat";
+  font-family: "Open Sans";
 }
 
 .side-nav {
@@ -21,7 +21,7 @@ nav {
 
 #jumbotron {
   padding-top: 50px;
-  font-family: "Montserrat";
+  font-family: "Open Sans";
   background-color: white;
   height: 350px;
   width: 100%;
