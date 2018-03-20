@@ -1,0 +1,44 @@
+<!--Navbar-->
+<!-- {{> nav/nav-bar}} -->
+<div class="navbar-fixed">
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">TSI</a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="/summary">Home</a></li>
+        <li><a href="/account-detail">Transactions</a></li>
+        <li class="active"><a href="/about">About</a></li>
+        <li><a href="/">Sign Out</a></li>
+      </ul>
+    </div>
+  </nav>
+</div>
+<ul class="side-nav" id="mobile-demo">
+  <li><a href="/summary">Home</a></li>
+  <li><a href="/account-detail">Transactions</a></li>
+</ul>
+<!-- jumbotron -->
+{{> jumbo/tron}}
+
+<!--About Body-->
+
+
+<!-- Footer Region -->
+<div class="row">
+  <div class="col s12">
+    <!-- Line Break followed by closing -->
+    <hr>
+    <h7 class="text-center"><small>Created by Team2: Technocrats <!--<i class="fa fa-stack-overflow"></i></small>--></h7>
+  </div>
+</div>
+</div>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!--Materialize JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Code to the JavaScript Files -->
+<script type='text/javascript' src='js/acctDetail.js'></script>
+<script type='text/javascript' src='js/nav.js'></script>
+<!--Nav feature-->
+<script type='text/javascript'>$(".button-collapse").sideNav();</script>

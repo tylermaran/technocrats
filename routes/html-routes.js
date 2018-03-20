@@ -8,7 +8,7 @@ module.exports = function(app) {
   app.get("/", function(req, res) {
     var items = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/login.css'>`,
-      title: `login`
+      title: `TSI`
     }
     res.render("login", items);
   });
@@ -17,7 +17,7 @@ module.exports = function(app) {
   app.get("/summary", function(req, res) {
     var items = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`,
-      title: `Summary`
+      title: `TSI`
     }
     res.render("mySummary", items);
   });
@@ -26,10 +26,21 @@ module.exports = function(app) {
   app.get("/account-detail", function(req, res) {
     var items = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`,
-      title: `Account Detail`
+      title: `Transactions`
     }
     res.render("acctDetail", items);
   });
+
+  //route to about.handlebars
+  app.get("/about", function(req, res) {
+    var items = {
+      stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`,
+      title: `About`
+    }
+    res.render("about", items);
+  });
+
+
   //
   // //loads CSS
   // //===================================================================
