@@ -2,12 +2,21 @@ body {
   background-color: #2C3539;
 }
 
+.login {
+  width: 800px;
+}
+
+@media screen and (max-width: 600px) {
+  .login {
+    width: 350px;
+  }
+}
+
 .card {
   margin-top: 30px;
   border-radius: 5px;
   color: #2B3856;
   font-family: "Montserrat";
-  height: 100%;
 }
 
 .card-title {
