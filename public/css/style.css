@@ -4,7 +4,7 @@ body {
 }
 
 nav {
-  font-family: "Roboto";
+  font-family: "Open Sans";
   font-weight: 300;
   background-color: #2d3e4f;
   padding-left: 30px;
@@ -16,7 +16,7 @@ nav {
 }
 
 .side-nav {
-  font-family: "Roboto";
+  font-family: "Open Sans";
 }
 
 #jumbotron {
@@ -29,7 +29,6 @@ nav {
 
 #jumbotron h4 {
   color: #f89b57;
-  width: 100%;
 }
 
 #title {
@@ -44,7 +43,7 @@ nav {
   top: 40px; */
   background-color: #E5E4E2;
   padding-top: 50px;
-  font-family: "Roboto";
+  font-family: "Open Sans";
   weight: 300;
   height: 100%;
 }
