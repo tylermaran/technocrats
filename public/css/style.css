@@ -4,7 +4,7 @@ body {
 }
 
 nav {
-  font-family: "Roboto";
+  font-family: "Open Sans";
   font-weight: 300;
   background-color: #2d3e4f;
   padding-left: 30px;
@@ -12,16 +12,16 @@ nav {
 }
 
 .brand-logo {
-  font-family: "Open Sans";
+  font-family: "Montserrat";
 }
 
 .side-nav {
-  font-family: "Roboto";
+  font-family: "Open Sans";
 }
 
 #jumbotron {
   padding-top: 50px;
-  font-family: "Open Sans";
+  font-family: "Montserrat";
   background-color: white;
   height: 350px;
   width: 100%;
@@ -43,7 +43,7 @@ nav {
   top: 40px; */
   background-color: #E5E4E2;
   padding-top: 50px;
-  font-family: "Roboto";
+  font-family: "Open Sans";
   weight: 300;
   height: 100%;
 }
