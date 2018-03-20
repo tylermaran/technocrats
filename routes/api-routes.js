@@ -1,5 +1,6 @@
 // Requiring our models for syncing
-var User = require("../models/broker.js");
+var customer_table = require("../models/customer_table.js");
+
 
 // Routes
 // =============================================================
@@ -7,36 +8,45 @@ module.exports = function(app) {
 
   //Routes for login page. GET existing account & POST new account
 
-  app.get("api/:users?", function(req, res) {
-    User.findAll({}).then(function(result) {
-      return res.json(result);
-    });
-  });
-
-  app.post("api/new", function(req, res) {
-    User.create({
-      email_id: req.body.email_id,
-      pass_word: req.body.pass_word,
-      last_name: req.body.last_name,
-      first_name: req.body.first_name
+  app.get("/api/all", function(req, res) {
+    // Finding all accounts, and returning them as a JSON object
+    console.log("Handles routing to all");
+    customer_table.findAll({}).then(function(result) {
+      res.json(result);
     })
   });
 
-// =============================================================
+  app.get("/", function(req, res) {
+    // Finding all accounts, and returning them as a JSON object
+    console.log("Handles routing to all");
+    customer_table.findAll({}).then(function(result) {
+      res.json(result);
+    })
+  });
+  
+  app.get("/summary", function(req, res) {
+    // Finding all accounts, and returning them as a JSON object
+    console.log("Handles routing to all");
+    customer_table.findAll({}).then(function(result) {
+      res.json(result);
+    })
+  });
 
-  // app.get(/*ROUTE GOES HERE*/, function(req, res) {
-  //   /*SEQUELIZE CODE GOES HERE*/
+  app.get("/account-detail", function(req, res) {
+    // Finding all accounts, and returning them as a JSON object
+    console.log("Handles routing to all");
+    customer_table.findAll({}).then(function(result) {
+      res.json(result);
+    })
+  });
+  
+  // app.post("api/new", function(req, res) {
+  //   Account.create({
+  //     email_id: req.body.email_id,
+  //     pass_word: req.body.pass_word,
+  //     last_name: req.body.last_name,
+  //     first_name: req.body.first_name
+  //   })
   // });
-  //
-  // app.post(/*ROUTE GOES HERE*/, function(req, res) {
-  //   /*SEQUELIZE CODE GOES HERE*/
-  // });
-  //
-  // app.delete(/*ROUTE GOES HERE*/, function(req, res) {
-  //   /*SEQUELIZE CODE GOES HERE*/
-  // });
-  //
-  // app.put(/*ROUTE GOES HERE*/, function(req, res) {
-  //   /*SEQUELIZE CODE GOES HERE*/
-  // });
+
 }

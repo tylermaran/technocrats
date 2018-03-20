@@ -21,7 +21,7 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 // Requiring our models for syncing
-var db = require("./models/broker.js");
+var db = require("./models/customer_table.js");
 
 // Sets up the Express app to handle data parsing
 app.use(bodyParser.urlencoded({ extended: false }));
