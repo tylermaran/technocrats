@@ -3,12 +3,12 @@ body {
 }
 
 .login {
-  width: 800px;
+  width: 50em;
 }
 
 @media screen and (max-width: 600px) {
   .login {
-    width: 350px;
+    width: 20em;
   }
 }
 
