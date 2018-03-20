@@ -5,7 +5,7 @@ require('dotenv').config()
 
 // Dependencies
 var Sequelize = require("sequelize");
-console.log(process.env.PW);
+
 // Creates mySQL connection using Sequelize
 var sequelize = new Sequelize("sequelizetechinvestments_db", "root", process.env.PW, {
   host: "localhost",
