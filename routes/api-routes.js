@@ -16,7 +16,7 @@ module.exports = function(app) {
     })
   });
 
-  app.get("/", function(req, res) {
+  app.get("/api", function(req, res) {
     // Finding all accounts, and returning them as a JSON object
     console.log("Handles routing to all");
     customer_table.findAll({}).then(function(result) {
@@ -24,7 +24,7 @@ module.exports = function(app) {
     })
   });
   
-  app.get("/summary", function(req, res) {
+  app.get("/api/summary", function(req, res) {
     // Finding all accounts, and returning them as a JSON object
     console.log("Handles routing to all");
     customer_table.findAll({}).then(function(result) {
@@ -32,14 +32,14 @@ module.exports = function(app) {
     })
   });
 
-  app.get("/account-detail", function(req, res) {
+  app.get("/api/account-detail", function(req, res) {
     // Finding all accounts, and returning them as a JSON object
     console.log("Handles routing to all");
     customer_table.findAll({}).then(function(result) {
       res.json(result);
     })
   });
-  
+
   // app.post("api/new", function(req, res) {
   //   Account.create({
   //     email_id: req.body.email_id,
