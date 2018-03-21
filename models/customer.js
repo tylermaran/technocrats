@@ -25,4 +25,4 @@ return Customer;
 
 }
 
-
+Customer.sync();
