@@ -7,11 +7,12 @@ DROP TABLE IF EXISTS acct_table;
 DROP TABLE IF EXISTS customer_table;
 
 CREATE TABLE customer_table (
-user_id int NOT NULL AUTO_INCREMENT,
+user_id INT AUTO_INCREMENT NOT NULL,
 email_id varchar(255) NOT NULL,
 pass_word varchar(255) NOT NULL,
 last_name varchar(255) NOT NULL,
 first_name varchar(255) NOT NULL,
+createdAt TIMESTAMP NOT NULL,
 PRIMARY KEY (user_id)
 );
 
@@ -20,7 +21,7 @@ INSERT INTO customer_table (
 ,pass_word
 ,last_name
 ,first_name
-) 
+)
 VALUES (
 'test@gmail.com'
 , 'test123'
@@ -33,7 +34,7 @@ INSERT INTO customer_table (
 ,pass_word
 ,last_name
 ,first_name
-) 
+)
 VALUES (
 'test@yahoo.com'
 , 'test123'
@@ -54,9 +55,9 @@ FOREIGN KEY (user_id)
 
 INSERT INTO acct_table (
  user_id
-,acct_type 
-,balance_amount 
-) 
+,acct_type
+,balance_amount
+)
 VALUES (
 1
 , 'Money Market Acct'
@@ -65,9 +66,9 @@ VALUES (
 
 INSERT INTO acct_table (
  user_id
-,acct_type 
-,balance_amount 
-) 
+,acct_type
+,balance_amount
+)
 VALUES (
 2
 , 'Roth IRA'
@@ -90,22 +91,22 @@ symbol_market_value decimal(10,2) NOT NULL,
 INDEX tran_table(tran_id),
 FOREIGN KEY (acct_id)
 	REFERENCES acct_table(acct_id)
-    ON DELETE CASCADE 
+    ON DELETE CASCADE
 );
 
 INSERT INTO tran_table (
- acct_id 
-,tran_datetime 
-,tran_symbol 
-,tran_desc 
-,symbol_quote 
-,symbol_delta 
-,symbol_quatity 
-,symbol_cost_share 
-,symbol_cost_basis 
-,symbol_gain_loss 
+ acct_id
+,tran_datetime
+,tran_symbol
+,tran_desc
+,symbol_quote
+,symbol_delta
+,symbol_quatity
+,symbol_cost_share
+,symbol_cost_basis
+,symbol_gain_loss
 ,symbol_market_value
-) 
+)
 VALUES (
 1
 , '2018-01-19 03:13:07.000000'
@@ -121,18 +122,18 @@ VALUES (
 );
 
 INSERT INTO tran_table (
- acct_id 
-,tran_datetime 
-,tran_symbol 
-,tran_desc 
-,symbol_quote 
-,symbol_delta 
-,symbol_quatity 
-,symbol_cost_share 
-,symbol_cost_basis 
-,symbol_gain_loss 
+ acct_id
+,tran_datetime
+,tran_symbol
+,tran_desc
+,symbol_quote
+,symbol_delta
+,symbol_quatity
+,symbol_cost_share
+,symbol_cost_basis
+,symbol_gain_loss
 ,symbol_market_value
-) 
+)
 VALUES (
 2
 , '2018-01-19 03:13:07.000000'
@@ -148,18 +149,18 @@ VALUES (
 );
 
 INSERT INTO tran_table (
- acct_id 
-,tran_datetime 
-,tran_symbol 
-,tran_desc 
-,symbol_quote 
-,symbol_delta 
-,symbol_quatity 
-,symbol_cost_share 
-,symbol_cost_basis 
-,symbol_gain_loss 
+ acct_id
+,tran_datetime
+,tran_symbol
+,tran_desc
+,symbol_quote
+,symbol_delta
+,symbol_quatity
+,symbol_cost_share
+,symbol_cost_basis
+,symbol_gain_loss
 ,symbol_market_value
-) 
+)
 VALUES (
 2
 , '2018-01-19 03:13:07.000000'

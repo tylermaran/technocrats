@@ -15,11 +15,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "use_env_variable": "DATABASE_URL",
-    "username": "root",
-    "password": "root",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql"
+    "username": "jhhbmi1keas7lfe5",
+    "password": "ohdujd0e7lj3e1kw",
+    "database": "sequelizetechinvestments_db",
+    "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql",
+    "port": 3306
   }
 }
