@@ -2,7 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
 
-  var Transaction = sequelize.define("Transaction", {
+  var Transaction = sequelize.define("tran_table", {
     tran_datetime: {
       type: DataTypes.DATE
     },

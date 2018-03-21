@@ -5,11 +5,11 @@ if(process.env.JAWSDB_URL) {
   connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
   connection = mysql.createConnection({
-    host: "127.0.0.1",
+    host: "localhos",
     user: "root",
-    passport: "root",
+    passport: process.env.PW,,
     database: "sequelizetechinvestments_db",
-    port: 8889,
+    port: 3306,
     dialect: "mysql"
   });
 };
