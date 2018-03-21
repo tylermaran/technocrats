@@ -7,7 +7,7 @@ require('dotenv').config()
 var Sequelize = require("sequelize");
 
 // Creates mySQL connection using Sequelize
-var sequelize = new Sequelize("techinvestments_db", "root", process.env.PW, {
+var sequelize = new Sequelize("sequelizetechinvestments_db", "root", process.env.PW, {
   host: "localhost",
   dialect: "mysql",
   pool: {
