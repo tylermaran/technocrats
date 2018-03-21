@@ -44,3 +44,5 @@ module.exports = function ( sequelize, DataTypes ) {
 
 
 Transaction.sync();
+
+module.exports = Transaction;

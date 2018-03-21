@@ -26,3 +26,5 @@ return Customer;
 }
 
 Customer.sync();
+
+module.exports = Customer;
