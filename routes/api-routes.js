@@ -1,6 +1,7 @@
 // Requiring our models for syncing
-var customer_table = require("../models/customer_table.js");
+// var Customer = require("../models/customer_table.js");
 
+var db = require( "../models" );
 
 // Routes
 // =============================================================
@@ -11,15 +12,15 @@ module.exports = function(app) {
   app.get("/api/all", function(req, res) {
     // Finding all accounts, and returning them as a JSON object
     console.log("Handles routing to all");
-    customer_table.findAll({}).then(function(result) {
+    db.Customer.findAll({}).then(function(result) {
       res.json(result);
     })
   });
 
-  app.get("/api", function(req, res) {
+  app.get("/api/:user?", function(req, res) {
     // Finding all accounts, and returning them as a JSON object
     console.log("Handles routing to all");
-    customer_table.findAll({}).then(function(result) {
+    db.Customer.findAll({}).then(function(result) {
       res.json(result);
     })
   });
@@ -27,7 +28,7 @@ module.exports = function(app) {
   app.get("/api/summary", function(req, res) {
     // Finding all accounts, and returning them as a JSON object
     console.log("Handles routing to all");
-    customer_table.findAll({}).then(function(result) {
+    db.Customer.findAll({}).then(function(result) {
       res.json(result);
     })
   });
@@ -35,7 +36,7 @@ module.exports = function(app) {
   app.get("/api/account-detail", function(req, res) {
     // Finding all accounts, and returning them as a JSON object
     console.log("Handles routing to all");
-    customer_table.findAll({}).then(function(result) {
+    db.Customer.findAll({}).then(function(result) {
       res.json(result);
     })
   });

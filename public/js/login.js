@@ -10,7 +10,7 @@ $( document ).ready(function() {
     searchedUser = searchedUser.replace(/\s+/g, "").toLowerCase();
 
     // send an AJAX GET-request
-    $.get("api/" + searchedUser, function(data) {
+    $.get("/api/" + searchedUser, function(data) {
 
       if (!data) {
         alert("Sorry, your email or password doesn't match what we have on file.");
