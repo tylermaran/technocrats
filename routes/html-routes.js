@@ -17,7 +17,7 @@ module.exports = function(app) {
   app.get("/summary", function(req, res) {
     var items = {
       stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`,
-      title: `TSI`,
+      title: `Summary`, 
       sumActive: true
     }
     res.render("mySummary", items);

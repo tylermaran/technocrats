@@ -1,48 +1,48 @@
 // Create Transaction Table to hold: Transaction Symbol, Transaction Description,
 
-module.exports = function ( sequelize, DataTypes ) {
+module.exports = function(sequelize, DataTypes) {
 
   var Transaction = sequelize.define("Transaction", {
-  	tran_datetime: {
+    tran_datetime: {
       type: DataTypes.DATE
     },
-    	tran_symbol: {
+    tran_symbol: {
       type: DataTypes.STRING
     },
-    	tran_desc: {
+    tran_desc: {
       type: DataTypes.STRING
     },
-    	symbol_quote: {
+    symbol_quote: {
       type: DataTypes.DECIMAL
     },
-    	symbol_delta: {
+    symbol_delta: {
       type: DataTypes.DECIMAL
     },
-    	symbol_quatity: {
+    symbol_quatity: {
       type: DataTypes.DECIMAL
     },
-    	symbol_cost_share: {
+    symbol_cost_share: {
       type: DataTypes.DECIMAL
     },
-    	symbol_cost_basis: {
+    symbol_cost_basis: {
       type: DataTypes.DECIMAL
     },
-    	symbol_gain_loss: {
+    symbol_gain_loss: {
       type: DataTypes.DECIMAL
     },
-    	symbol_market_value: {
+    symbol_market_value: {
       type: DataTypes.DECIMAL
     },
   }, {
     timestamps: false,
     freezeTableName: true
   });
+  Transaction.sync();
 
   return Transaction;
 
 }
 
 
-Transaction.sync();
 
-module.exports = Transaction;
+// module.exports = Transaction;

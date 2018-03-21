@@ -1,11 +1,11 @@
 // Create Account Table to hold: Accont Type and Balance Amount
-module.exports = function ( sequelize, DataTypes ) {
+module.exports = function(sequelize, DataTypes) {
 
   var Account = sequelize.define("Account", {
     acct_type: {
       type: DataTypes.STRING
     },
-      balance_amount: {
+    balance_amount: {
       type: DataTypes.DECIMAL
     },
   }, {
@@ -13,10 +13,13 @@ module.exports = function ( sequelize, DataTypes ) {
     freezeTableName: true
   });
 
+  Account.sync();
+
+
   return Account;
+
 
 }
 
-Account.sync();
 
-module.exports = Account;
+// module.exports = Account;

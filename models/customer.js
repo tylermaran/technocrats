@@ -20,11 +20,11 @@ var Customer = sequelize.define("Customer", {
   timestamps: false,
   freezeTableName: true
 });
+Customer.sync();
 
 return Customer;
 
 }
 
-Customer.sync();
 
-module.exports = Customer;
+// module.exports = Customer;
