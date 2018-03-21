@@ -1,12 +1,19 @@
-
 <div class="navbar-fixed">
   <nav>
     <div class="nav-wrapper">
       <a href="#" class="brand-logo">TSI</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li class="nav-link active"><a href="/summary">Home</a></li>
-        <li class="nav-link"><a href="/account-detail">Transactions</a></li>
+        <li id="summary" {{#if sumActive}}class="active"{{else}}{{/if}}>
+          <a href="/summary">Home</a>
+        </li>
+        <li id="account-detail" {{#if accActive}}class="active"{{else}}{{/if}}>
+          <a href="/account-detail">Transactions</a>
+        </li>
+        <li id="about" {{#if abtActive}}class="active"{{else}}{{/if}}>
+          <a href="/about">About</a>
+        </li>
+        <li><a href="/">Sign Out</a></li>
       </ul>
     </div>
   </nav>
@@ -14,4 +21,6 @@
 <ul class="side-nav" id="mobile-demo">
   <li><a href="/summary">Home</a></li>
   <li><a href="/account-detail">Transactions</a></li>
+  <li><a href="/about">About</a></li>
+  <li><a href="/">Sign Out</a></li>
 </ul>
