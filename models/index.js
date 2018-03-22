@@ -13,7 +13,8 @@ if (process.env.NODE_ENV && process.env.NODE_ENV === "production") {
     host: process.env.DB_HOST,
     database: process.env.DB,
     username: process.env.USERNAME,
-    password: process.env.PASSWORD
+    password: process.env.PASSWORD,
+    dialect: "mysql"
   });
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
