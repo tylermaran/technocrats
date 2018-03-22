@@ -36,7 +36,7 @@ module.exports = function(app) {
   //route to about.handlebars
   app.get("/about", function(req, res) {
     var items = {
-      stylesheet: `<link rel='stylesheet' type='text/css' href='/about.css'>`,
+      stylesheet: `<link rel='stylesheet' type='text/css' href='/style.css'>`,
       title: `About`,
       abtActive: true
     }
