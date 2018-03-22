@@ -25,6 +25,3 @@ Customer.sync();
 return Customer;
 
 }
-
-
-// module.exports = Customer;

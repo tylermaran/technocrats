@@ -2,7 +2,7 @@
 
 module.exports = function(sequelize, DataTypes) {
 
-  var Transaction = sequelize.define("tran_table", {
+  var Transaction = sequelize.define("Transaction", {
     tran_datetime: {
       type: DataTypes.DATE
     },
@@ -37,12 +37,9 @@ module.exports = function(sequelize, DataTypes) {
     timestamps: false,
     freezeTableName: true
   });
+  
   Transaction.sync();
 
   return Transaction;
 
 }
-
-
-
-// module.exports = Transaction;
