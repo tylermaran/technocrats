@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>About</title>
+	<!-- MATERIALIZEjs Styling for Improving the Aesthetics -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css"-->
+	<!-- Font Awesome CSS Icons (For cool glyphicons) -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!--Google Fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<!-- Style Sheet -->
+  <link rel='stylesheet' type='text/css' href='css/about.css'>
+  <!-- Style to fix the issue of text extending past panel length -->
+	  <style>
+	  .panel-body a {
+	    word-break: break-all;
+	  }
+		</style>
+</head>
+
+<body>
+  <div class="navbar-fixed">
+    <nav>
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">TSI</a>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li id="summary" {{#if sumActive}}class="active"{{else}}{{/if}}>
+            <a href="/summary">Home</a>
+          </li>
+          <li id="account-detail" {{#if accActive}}class="active"{{else}}{{/if}}>
+            <a href="/account-detail">Transactions</a>
+          </li>
+          <li id="about" {{#if abtActive}}class="active"{{else}}{{/if}}>
+            <a href="/about">About</a>
+          </li>
+          <li><a href="/">Sign Out</a></li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <ul class="side-nav" id="mobile-demo">
+    <li><a href="/summary">Home</a></li>
+    <li><a href="/account-detail">Transactions</a></li>
+    <li><a href="/about">About</a></li>
+    <li><a href="/">Sign Out</a></li>
+  </ul>
+  <div  id="jumbotron">
+    <h1 class="center-align" id="title"><strong>Tech Square Investments</strong></h1>
+    <h4 class="center-align">The Bank for New Ideas.</h4>
+    <br>
+    <h5 id="targetname">&nbsp;</h5>
+  </div>
+
+
+<!--Dean, all of your code goes here! We can convert to handlebars after-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Footer Region -->
+<div class="row">
+  <div class="col s12">
+    <!-- Line Break followed by closing -->
+    <hr>
+    <h7 class="text-center"><small>Created by Team2: Technocrats <!--<i class="fa fa-stack-overflow"></i></small>--></h7>
+  </div>
+</div>
+</div>
+<!-- jQuery JS -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!--Materialize JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<!-- Code to the JavaScript Files -->
+<script type='text/javascript' src='js/acctDetail.js'></script>
+<script type='text/javascript' src='js/nav.js'></script>
+<!--Nav feature-->
+<script type='text/javascript'>$(".button-collapse").sideNav();</script>
+
+
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <!--Materialize JS-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <!-- Code to the JavaScript Files -->
+
+  </body>
+
+
+  </html>
