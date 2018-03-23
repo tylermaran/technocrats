@@ -27,7 +27,7 @@ for (var i = 0; i < acctJsonDB.length; i++) {
             .append($('<td>').append(acctJsonDB[i].acct_id))
             .append($('<td>').append(acctJsonDB[i].acct_desc))
             .append($('<td>').append(acctJsonDB[i].acct_type))
-            .append($('<td>').append(acctJsonDB[i].balance_amount))
+            .append($('<td class="balance">').append(acctJsonDB[i].balance_amount))
 
         ) // <tr>
 
@@ -55,7 +55,7 @@ function runQuery(queryURLBase) {
     })
 
     .done(function(response) {
-        //form input variables 
+        //form input variables
         var acctdata = response;
         var symbol = acctdata['Meta Data']['2. Symbol']
         var lastRefreshed = acctdata['Meta Data']['3. Last Refreshed']
