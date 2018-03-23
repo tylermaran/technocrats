@@ -2,23 +2,27 @@ body {
   background-color: #E5E4E2;
 }
 
+.error {
+  color: red;
+}
+
 .login {
   width: 50em;
-  }
+}
 
+.card {
+  height: 32em;
+  margin-top: 100px;
+  border-radius: 5px;
+  color: #2B3856;
+  font-family: "Montserrat";
+}
+
+@media screen and (max-width: 1200px) {
   .card {
-    height: 32em;
-    margin-top: 100px;
-    border-radius: 5px;
-    color: #2B3856;
-    font-family: "Montserrat";
+    height: 36em;
   }
-
-  @media screen and (max-width: 1200px) {
-    .card {
-      height: 36em;
-    }
-  }
+}
 
 @media screen and (max-width: 600px) {
   .login {
@@ -39,50 +43,55 @@ body {
 }
 
 /*Background video*/
+
 .homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: relative;
+  border-right: none;
+  border-left: none;
+  position: relative;
 }
-.no-video .video-container video,
-.touch .video-container video {
-    display: none;
+
+.no-video .video-container video, .touch .video-container video {
+  display: none;
 }
-.no-video .video-container .poster,
-.touch .video-container .poster {
-    display: block !important;
+
+.no-video .video-container .poster, .touch .video-container .poster {
+  display: block !important;
 }
+
 .video-container {
-    position: absolute;
-    top: 0%;
-    bottom: 0%;
-    left: 0%;
-    width: 100%;
-    overflow: hidden;
-    height: 700px;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  width: 100%;
+  overflow: hidden;
+  height: 700px;
 }
+
 .video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    top: 0;
-    position: absolute;
+  width: 100%;
+  bottom: 0;
+  top: 0;
+  position: absolute;
 }
 
 .video-container .filter {
-    z-index: 100;
-    position: absolute;
-    background: rgba(0, 0, 0, 0.4);
-    width: 100%;
+  z-index: 100;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
+
 .video-container video {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-    top: 0;
-    height: 100%;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  top: 0;
+  height: 100%;
 }
+
 .video-container video.fillWidth {
-    width: 100%;
+  width: 100%;
 }
 
 .videoScreen {
@@ -90,6 +99,7 @@ body {
 }
 
 /*Footer*/
+
 #footer {
   position: relative;
   top: 900px;

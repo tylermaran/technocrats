@@ -1,22 +1,22 @@
 {
   "development": {
-    "port": 8889,
+    "port": 3306,
     "username": "root",
-    "password": "root",
+    "password": "fatboy11",
     "database": "sequelizetechinvestments_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "password",
+    "password": "fatboy11",
     "database": "database_test",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },
   "production": {
     "username": "jhhbmi1keas7lfe5",
-    "password": "password",
+    "password": "fatboy11",
     "database": "j1d96mplafapq71g",
     "host": "ixqxr3ajmyapuwmi.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
