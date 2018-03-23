@@ -12,10 +12,9 @@ body {
   }
 
 .card {
-  /* height: 32em; */
   margin-top: 100px;
   border-radius: 5px;
-  color: #2B3856;
+  color: #124257;
   font-family: "Open Sans";
 }
 
@@ -23,21 +22,17 @@ body {
   font-family: "Montserrat";
 }
 
-  /* @media screen and (max-width: 1200px) {
-    .card {
-      height: 36em;
-    }
-  } */
+
 
 @media screen and (max-width: 600px) {
   .login {
-    width: 80vw;
-    margin-left: -37vw;
+    width: 20em;
+    margin-left: -10em;
   }
 }
 
 .card-title {
-  color: #2d3e4f;
+  color: #124257;
 }
 
 #slogan {

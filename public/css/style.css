@@ -1,12 +1,12 @@
 body {
-  color: #2d3e4f;
+  color: #124257;
   background-color: #E5E4E2;
 }
 
 nav {
   font-family: "Open Sans";
   font-weight: 300;
-  background-color: #2d3e4f;
+  background-color: #124257;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -49,7 +49,7 @@ nav {
 
 #welcomePanel {
   width: 300px;
-  color: #008080;
+  color: #26a69a;
 }
 
 table {
@@ -62,7 +62,7 @@ th {
 }
 
 .balance {
-  color: #008080;
+  color: #26a69a;
 }
 
 #trxTable {
