@@ -69,6 +69,28 @@ th {
   margin-top: 20px;
 }
 
-
+#tsi {
+  font-weight: bold;
+}
 
 /*About*/
+#mission {
+  margin: auto;
+  font-style: italic;
+  font-size: 30px;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+#team {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card-image {
+  padding: 20px;
+  width: 275px;
+  height: 275px;
+}
