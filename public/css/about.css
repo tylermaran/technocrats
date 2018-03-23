@@ -69,4 +69,31 @@ th {
   margin-top: 20px;
 }
 
-/*Dean, your code goes below!*/
+/*About page*/
+#about {
+  color: red;
+}
+
+#team {
+  color: red;
+}
+
+.headshots {
+  padding: 20px;
+  width: 250px;
+  height: 250px;
+}
+
+.memberName {
+  padding: 20px;
+}
+
+.bio {
+  padding: 20px;
+  font-size: 20px;
+}
+
+b {
+  padding: 20px;
+  font-size: 20px;
+}

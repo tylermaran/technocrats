@@ -14,4 +14,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/css/login.css"));
   });
 
+  app.get("/tyler.png", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/images/tyler.png"));
+  });
+
 };

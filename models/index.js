@@ -8,8 +8,15 @@ var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
-if (config.use_env_variable) {
-  var sequelize = new Sequelize(process.env[config.use_env_variable]);
+//Important for Heroku deployment
+if (process.env.NODE_ENV && process.env.NODE_ENV === "production") {
+  var sequelize = new Sequelize({
+    host: process.env.DB_HOST,
+    database: process.env.DB,
+    username: process.env.USERNAME,
+    password: process.env.PASSWORD,
+    dialect: "mysql"
+  });
 } else {
   var sequelize = new Sequelize(config.database, config.username, config.password, config);
 }

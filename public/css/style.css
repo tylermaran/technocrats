@@ -1,12 +1,12 @@
 body {
-  color: #2d3e4f;
+  color: #124257;
   background-color: #E5E4E2;
 }
 
 nav {
   font-family: "Open Sans";
   font-weight: 300;
-  background-color: #2d3e4f;
+  background-color: #124257;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -49,7 +49,7 @@ nav {
 
 #welcomePanel {
   width: 300px;
-  color: #008080;
+  color: #26a69a;
 }
 
 table {
@@ -62,11 +62,39 @@ th {
 }
 
 .balance {
-  color: #008080;
+  color: #26a69a;
 }
 
 #trxTable {
   margin-top: 20px;
 }
 
+#tsi {
+  font-weight: bold;
+}
+
 /*About*/
+#mission {
+  width: 80%;
+  margin: auto;
+  font-family: "Raleway";
+  font-size: 28px;
+  color: #26a69a;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  text-align: center;
+}
+
+#team {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.card-image {
+  border-radius: 5px;
+  padding: 20px;
+  width: 275px;
+  height: 275px;
+  border-radius: 100%;
+}
