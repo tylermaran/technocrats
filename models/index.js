@@ -8,6 +8,7 @@ var env       = process.env.NODE_ENV || 'development';
 var config    = require(__dirname + '/../config/config.json')[env];
 var db        = {};
 
+//Important for Heroku deployment
 if (process.env.NODE_ENV && process.env.NODE_ENV === "production") {
   var sequelize = new Sequelize({
     host: process.env.DB_HOST,
