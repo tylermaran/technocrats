@@ -2,7 +2,7 @@
   "development": {
     "port": 3306,
     "username": "root",
-    "password": "Readyplayer1",
+    "password": "password",
     "database": "sequelizetechinvestments_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
