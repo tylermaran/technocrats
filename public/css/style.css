@@ -90,7 +90,9 @@ th {
 }
 
 .card-image {
+  border-radius: 5px;
   padding: 20px;
   width: 275px;
   height: 275px;
+  border-radius: 100%;
 }
