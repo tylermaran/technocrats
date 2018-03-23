@@ -73,6 +73,13 @@ th {
   font-weight: bold;
 }
 
+#stockAPI {
+  background-color: white;
+  width: 450px;
+  border: 1px solid lightgrey;
+  padding-left: 10px;
+}
+
 /*About*/
 #mission {
   width: 80%;
