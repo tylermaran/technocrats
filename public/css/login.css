@@ -6,13 +6,17 @@ body {
   width: 50em;
   }
 
-  .card {
-    height: 32em;
-    margin-top: 100px;
-    border-radius: 5px;
-    color: #2B3856;
-    font-family: "Montserrat";
-  }
+.card {
+  height: 32em;
+  margin-top: 100px;
+  border-radius: 5px;
+  color: #2B3856;
+  font-family: "Open Sans";
+}
+
+.card-content {
+  font-family: "Montserrat";
+}
 
   @media screen and (max-width: 1200px) {
     .card {
@@ -59,7 +63,7 @@ body {
     left: 0%;
     width: 100%;
     overflow: hidden;
-    height: 700px;
+    height: 100vh;
 }
 .video-container .poster img {
     width: 100%;
