@@ -47,6 +47,18 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/transaction/:searchedEmail", function(req, res) {
+    console.log("Searching for user")
+    db.Transaction.findOne({
+      where: {
+        email_id: req.params.searchedEmail
+      }
+    })
+    .then(function(dbPost) {
+      res.json(dbPost);
+    });
+  });
+
   app.post("/api/new", function(req, res) {
     console.log(req.body.email_id);
     db.Customer.create({

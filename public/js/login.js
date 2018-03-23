@@ -28,6 +28,7 @@ $( document ).ready(function() {
       } 
       if (data.pass_word===searchedPass) {
         console.log("Correct password");
+        document.cookie = "username=tyler.maran@gmail.com";
         window.location = "/summary";
       }
       else {
