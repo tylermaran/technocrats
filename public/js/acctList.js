@@ -1,3 +1,6 @@
+// var numeral = require('numeral');
+
+
 //DUMMY DATA
 var acctJsonDB = [{
         "acct_id": "304326",
@@ -65,9 +68,9 @@ function runQuery(queryURLBase) {
         // IMPORTANT! Functional Expression VS. Functional Declaration
         // Page will die here if Func Declaration not used as API Loads Slooow. Func Declaration == BETTER as it waits for .done before firing
         function displayMkt() {
-            $("#stockmkt").append("<br> Market Index :  " + symbol);
-            $("#stockmkt").append("<br> Last Refreshed :  " + lastRefreshed);
-            $("#stockmkt").append("<br> Last Trade Price :  " + lastTradePriceOnly);
+            $("#stockmkt").append("<br> Index :  " + symbol);
+            // $("#stockmkt").append("<br> Last Refreshed :  " + lastRefreshed);
+            $("#stockmkt").append("<br> Last Trade Price :  <span class='balance'>" + numeral(lastTradePriceOnly).format('0,0') + "</span>");
             //$("#stockmkt").append("<br> Last Volume :  " + lastVolume);
         }
         // Logging the URL so we have access to it for troubleshooting
