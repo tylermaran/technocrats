@@ -20,51 +20,31 @@ var acctJsonDB = [{
     }
 ];
 
+// parse JSON and Display in TABLE
+for (var i = 0; i < acctJsonDB.length; i++) {
 
-// These variables will hold the results we get from the user's inputs via HTML
-var searchTerm = "";
-var numResults = "";
-var startYear = 0;
-var endYear = 0;
+    $('#targetbody').append($('<tr>')
+            .append($('<td>').append(acctJsonDB[i].acct_id))
+            .append($('<td>').append(acctJsonDB[i].acct_desc))
+            .append($('<td>').append(acctJsonDB[i].acct_type))
+            .append($('<td>').append(acctJsonDB[i].balance_amount))
+
+        ) // <tr>
+
+} //FOR LOOP
+
 
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 
-var queryURLBase = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=DJI&apikey=QXOWRDKW82K1ZDBF";
+//var queryURLBase = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=DJI&apikey=QXOWRDKW82K1ZDBF";
 
+var queryURLBase = "https://www.alphavantage.co/query?function=TIME_SERIES_INTRADAY&symbol=DJI&interval=60min&apikey=QXOWRDKW82K1ZDBF";
 
-var weatherDesc = "";
-var picImg = "";
-var picImgUrl = "";
-var atlTemp = "";
-var atlHumidity = "";
-
-//Weather section - THIS WILL BE REPLACED BY A STOCK TICKER API:
-// $.ajax({
-//     url: "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=DJI&apikey=QXOWRDKW82K1ZDBF",
-//     method: "GET"
-// }).done(function(weatherData) {
-// weatherDesc = weatherData[0].close;
-// picImg = weatherData.weather[0].icon;
-// picImgUrl = "https://openweathermap.org/img/w/" + picImg + ".png";
-// picImgUrl = "https://openweathermap.org/img/w/11d.png";
-// atlTemp = weatherData.main.temp;
-// atlHumidity = weatherData.main.humidity;
-
-// console.log(weatherDesc);
-// console.log(weatherDesc + " " + picImg + " " + atlTemp);
-// console.log(picImgUrl);
-
-// $("img").attr("src", picImgUrl);
-
-// $("#atlweather").append("<br> Dow Jones Industrial Average Index :  " + weatherDesc);
-// $("#atlweather").append("<br><br> Temperature is :  " + atlTemp + " deg F");
-// $("#atlweather").append("<br><br> Humidity is :  " + atlHumidity + "%");
-// //$("#atlweather").append("<br><br> Picture Image:  " + picImg);
-// $("#atlweather").append("<br><br> Picture Image URL :  " + picImgUrl);
-
-
-//});
-
+var acctdata = "";
+var symbol = "";
+var lastRefreshed = "";
+var lastTradePriceOnly = "";
+var lastVolume = "";
 
 function runQuery(queryURLBase) {
 
@@ -75,33 +55,33 @@ function runQuery(queryURLBase) {
     })
 
     .done(function(response) {
-        //form input variables
+        //form input variables 
         var acctdata = response;
+        var symbol = acctdata['Meta Data']['2. Symbol']
+        var lastRefreshed = acctdata['Meta Data']['3. Last Refreshed']
+        var lastTradePriceOnly = acctdata['Time Series (60min)'][lastRefreshed]['4. close']
+        var lastVolume = acctdata['Time Series (60min)'][lastRefreshed]['5. volume']
 
-
+        // IMPORTANT! Functional Expression VS. Functional Declaration
+        // Page will die here if Func Declaration not used as API Loads Slooow. Func Declaration == BETTER as it waits for .done before firing
+        function displayMkt() {
+            $("#stockmkt").append("<br> Market Index :  " + symbol);
+            $("#stockmkt").append("<br> Last Refreshed :  " + lastRefreshed);
+            $("#stockmkt").append("<br> Last Trade Price :  " + lastTradePriceOnly);
+            //$("#stockmkt").append("<br> Last Volume :  " + lastVolume);
+        }
         // Logging the URL so we have access to it for troubleshooting
-        console.log("------------------------------------");
-        console.log("Full Data:");
-        console.log(acctdata);
-        console.log("------------------------------------");
+        // console.log("------------------------------------");
+        // console.log("Full Data:");
+        // console.log(acctdata);
+        // console.log(lastRefreshed);
+        // console.log(lastTradePriceOnly);
+        // console.log(lastVolume);
+        // console.log("------------------------------------");
 
-        // parse JSON and Display in TABLE
-        for (var i = 0; i < acctJsonDB.length; i++) {
-
-            $('#targetbody').append($('<tr>')
-                    .append($('<td>').append(acctJsonDB[i].acct_id))
-                    .append($('<td>').append(acctJsonDB[i].acct_desc))
-                    .append($('<td>').append(acctJsonDB[i].acct_type))
-                    .append($('<td class="balance">').append(acctJsonDB[i].balance_amount))
-
-                ) // <tr>
-
-            // } // IF Station ===
-
-        } //FOR LOOP
-
-
-    }); // ; for .done & .fail
+        displayMkt();
+    });
+    // ; for .done & .fail
 
 }
 
