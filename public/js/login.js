@@ -72,6 +72,7 @@ $(document).ready(function() {
       endingTop: '10%', // Ending top style attribute
       complete: function() {
         console.log('modal sucess');
+        $('#modal1').modal('close');
       }
     });
 
@@ -150,8 +151,10 @@ $(".formValidate").validate({
 
     $.post("/api/new", newUser).then(function(data) {
 
-      $("#enrollBtn").attr("href", "mySummary.html");
+      // $("#enrollBtn").attr("href", "mySummary.html");
       console.log('posted');
+      window.location.href = "/summary";
+
 
     });
   }
