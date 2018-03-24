@@ -144,3 +144,7 @@ th {
   height: 275px;
   border-radius: 100%;
 }
+
+#lastCard {
+  margin-bottom:50px;
+}
