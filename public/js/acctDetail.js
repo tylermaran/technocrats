@@ -52,13 +52,15 @@ $( document ).ready(function() {
   console.log("acctDetail.js Loaded!");
 
 // ************************************************************************
-    $.get("/api/transaction/" + searchedEmail, function(data) {
+    // $.get("/api/transaction/" + searchedEmail, function(data) {
+    //
+    //   if (!data) {
+    //     // No matching email in the database
+    //     alert("Sorry, no account info found");
+    //     return;
+    //   }
+// ************************************************************************
 
-      if (!data) {
-        // No matching email in the database
-        alert("Sorry, no account info found");
-        return;
-      } 
       // if (data.pass_word===searchedPass) {
       //   console.log("Correct password");
       //   window.location = "/summary";
@@ -68,8 +70,8 @@ $( document ).ready(function() {
       //   $("#pass_word").val("");
       // }
 
-    console.log(data);
-     
+    // console.log(data);
+
     for (var i = 0; i < acctDetailDB.length; i++) {
         $('#targetbody').append($('<tr>')
             .append($('<td>').append(acctDetailDB[i].tran_id))
@@ -84,10 +86,10 @@ $( document ).ready(function() {
             .append($('<td>').append(acctDetailDB[i].symbol_cost_basis))
             .append($('<td>').append(acctDetailDB[i].symbol_gain_loss))
             .append($('<td>').append(acctDetailDB[i].symbol_market_value))
-        ) 
-    } 
+        )
+    }
 
-    });
+  // });
 
   });
 
@@ -105,7 +107,7 @@ $( document ).ready(function() {
 //     })
 
 //     .done(function(response) {
-//         //form input variables 
+//         //form input variables
 //         var acctdata = response;
 
 
@@ -131,11 +133,11 @@ $( document ).ready(function() {
 //                     .append($('<td>').append(acctDetailDB[i].symbol_cost_basis))
 //                     .append($('<td>').append(acctDetailDB[i].symbol_gain_loss))
 //                     .append($('<td>').append(acctDetailDB[i].symbol_market_value))
-//                 ) 
+//                 )
 
-//         } 
+//         }
 
-//     }); 
+//     });
 
 // }
 
