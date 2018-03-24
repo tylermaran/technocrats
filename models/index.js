@@ -12,7 +12,6 @@ var db        = {};
 if (process.env.NODE_ENV && process.env.NODE_ENV === "production") {
   var sequelize = new Sequelize({
     host: process.env.DB_HOST,
-    port: process.env.PORT,
     database: process.env.DB,
     username: process.env.USERNAME,
     password: process.env.PASSWORD,
