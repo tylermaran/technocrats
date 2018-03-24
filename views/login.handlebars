@@ -63,39 +63,39 @@
       <form class="col s12 formValidate needs-validation" id="formValidate" method="get" action novalidate="novalidate">
         <div class="row">
           <div class="input-field col s6">
-            <input id="fname" type="text" class="validate">
+            <input id="fname" type="text" class="validate" name="fname" required>
             <label for="fname">First Name</label>
           </div>
           <div class="input-field col s6">
-            <input id="lname" type="text" class="validate">
+            <input id="lname" type="text" class="validate" name="lname" required>
             <label for="lname">Last Name</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="password" type="password" name="password" class="validate">
+            <input id="password" type="password" name="password" class="validate" required>
             <label for="password">Password</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="confirm-password" type="password" name="confirm_password" class="validate">
+            <input id="confirm-password" type="password" name="confirm_password" class="validate" required>
             <label for="confirm_password">Confirm Password</label>
           </div>
         </div>
         <div class="row">
           <div class="input-field col s12">
-            <input id="email" type="email" class="validate">
+            <input id="email" type="email" class="validate" name="email" required>
             <label for="email">Email</label>
           </div>
         </div>
+        <div class="input-field col s12">
+          <button class="btn waves-effect waves-light right submit" type="submit" name="action">Submit
+              <i class="mdi-content-send right"></i>
+            </button>
+        </div>
       </form>
     </div>
-  </div>
-  <div class="modal-footer">
-    <button id="signup_submit" class="btn waves-effect waves-light right submit" type="submit" value="submit">Submit
-    </button>
-    <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
   </div>
 </div>
 
