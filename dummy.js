@@ -5,10 +5,10 @@ db.Transaction.create({
     tran_datetime:'2018-01-19 03:13:07.000000',
     tran_symbol: 'QQQ',
     tran_desc: 'POWERSHARES NASDAQ 100',
-	symbol_quote: 100,
+	  symbol_quote: 100,
     symbol_delta: 0,
     symbol_quatity: 1,
-    symbol_cost_share: 80, 
+    symbol_cost_share: 80,
     symbol_cost_basis: 80,
     symbol_gain_loss: 20,
     symbol_market_value: 100
@@ -29,7 +29,7 @@ db.Transaction.create({
   symbol_quote: 275,
     symbol_delta: 2,
     symbol_quatity: 5,
-    symbol_cost_share: 280, 
+    symbol_cost_share: 280,
     symbol_cost_basis: 220,
     symbol_gain_loss: 60,
     symbol_market_value: 295
