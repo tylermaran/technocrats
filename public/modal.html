@@ -82,54 +82,10 @@
               <i class="mdi-content-send right"></i>
             </button>
           </div>
-          <!-- <input class="btn waves-effect waves-light right submit" type="submit" value="Submit"> -->
         </form>
       </div>
     </div>
-    <!-- <div class="modal-footer">
-      <input id="sub-btn" class="submit" type="submit" value="Submit">
-      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Return to Login</a>
-    </div> -->
   </div>
-  <!-- <form class="formValidate" id="formValidate2" method="get" action="" novalidate="novalidate">
-    <div class="row">
-      <div class="input-field col s12">
-        <label for="uname" class="">Username*</label>
-        <input id="uname" name="uname" type="text" data-error=".errorTxt1" aria-required="true" class="error" aria-describedby="uname-error" aria-invalid="true">
-        <div class="errorTxt1">
-          <div id="uname-error" class="error">Enter a username</div>
-        </div>
-      </div>
-      <div class="input-field col s12">
-        <label for="cemail">E-Mail *</label>
-        <input id="cemail" type="email" name="cemail" data-error=".errorTxt2" aria-required="true" class="error" aria-describedby="cemail-error">
-        <div class="errorTxt2">
-          <div id="cemail-error" class="error">This field is required.</div>
-        </div>
-      </div>
-      <div class="input-field col s12">
-        <label for="password">Password *</label>
-        <input id="password" type="password" name="password" data-error=".errorTxt3" aria-required="true" class="error" aria-describedby="password-error">
-        <div class="errorTxt3">
-          <div id="password-error" class="error">This field is required.</div>
-        </div>
-      </div>
-      <div class="input-field col s12">
-        <label for="cpassword">Confirm Password *</label>
-        <input id="cpassword" type="password" name="cpassword" data-error=".errorTxt4" aria-required="true" class="error" aria-describedby="cpassword-error">
-        <div class="errorTxt4">
-          <div id="cpassword-error" class="error">This field is required.</div>
-        </div>
-      </div>
-
-
-      <div class="input-field col s12">
-        <button class="btn waves-effect waves-light right submit" type="submit" name="action">Submit
-                                              <i class="mdi-content-send right"></i>
-                                            </button>
-      </div>
-    </div>
-  </form> -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
@@ -139,8 +95,6 @@
       success: "valid"
     });
     $(".modal-trigger").on("click", function() {
-      // alert("hey")
-
       $('#modal1').modal({
         dismissible: true, // Modal can be dismissed by clicking outside of the modal
         opacity: .5, // Opacity of modal background
@@ -153,21 +107,9 @@
         }
       });
     });
-    $("#sub-btn").on('click', function(e) {
-      var isvalid = $("#signup_submit").valid();
-      if (isvalid) {
-        // e.preventDefault();
-        // alert(getvalues("myform"));
-        console.log('no submit');
-      }
-    });
 
-    var error = false;
-
+    
     $(".formValidate").validate({
-      // success: function() {
-      //   console.log('sucess');
-      // },
       rules: {
         fname: {
           required: true,
@@ -224,7 +166,6 @@
         } else {
           error.insertAfter(element);
         }
-        error = true
       },
       submitHandler: function() {
         // alert("Submitted!");
