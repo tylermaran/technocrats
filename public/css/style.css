@@ -79,6 +79,7 @@ th {
   border: 1px solid lightgrey;
   padding-left: 10px;
   height: 100px;
+  margin-bottom: 50px;
 }
 
 #stockmkt {
@@ -142,4 +143,8 @@ th {
   width: 275px;
   height: 275px;
   border-radius: 100%;
+}
+
+#lastCard {
+  margin-bottom:50px;
 }
