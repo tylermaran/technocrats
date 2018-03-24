@@ -58,6 +58,7 @@ function runQuery(queryURLBase) {
     })
 
     .done(function(response) {
+
         //form input variables
         var acctdata = response;
         var symbol = acctdata['Meta Data']['2. Symbol']
@@ -68,6 +69,8 @@ function runQuery(queryURLBase) {
         // IMPORTANT! Functional Expression VS. Functional Declaration
         // Page will die here if Func Declaration not used as API Loads Slooow. Func Declaration == BETTER as it waits for .done before firing
         function displayMkt() {
+            $(".hidden").removeClass("hidden");
+            $(".loader").addClass("hidden");
             $("#stockmkt").append("<br> Index :  " + symbol);
             // $("#stockmkt").append("<br> Last Refreshed :  " + lastRefreshed);
             $("#stockmkt").append("<br> Last Trade Price :  <span class='balance'>" + numeral(lastTradePriceOnly).format('0,0') + "</span>");

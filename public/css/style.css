@@ -78,7 +78,45 @@ th {
   width: 400px;
   border: 1px solid lightgrey;
   padding-left: 10px;
+  height: 100px;
 }
+
+#stockmkt {
+  position: relative;
+  bottom: 50px;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/* Loader */
+.loader {
+  margin:auto;
+  position: relative;
+  top: 30px;
+  border: 10px solid white;
+  border-radius: 50%;
+  border-top: 10px solid #26a69a;
+  border-right: 10px solid #124257;
+  border-bottom: 10px solid #f89b57;
+  width: 40px;
+  height: 40px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
 
 /*About*/
 #mission {
