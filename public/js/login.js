@@ -1,81 +1,81 @@
 $(document).ready(function() {
-    console.log("Login.js Loaded!");
+  console.log("Login.js Loaded!");
 
-    // when user clicks "Login"
-    //======================================================
-    $("#run-search").on("click", function(event) {
-        event.preventDefault();
-        var searchedUser = $("#email_id").val().trim();
-        var searchedPass = $("#pass_word").val().trim();
-        searchedUser = searchedUser.replace(/\s+/g, "").toLowerCase();
+  // when user clicks "Login"
+  //======================================================
+  $("#run-search").on("click", function(event) {
+    event.preventDefault();
+    var searchedUser = $("#email_id").val().trim();
+    var searchedPass = $("#pass_word").val().trim();
+    searchedUser = searchedUser.replace(/\s+/g, "").toLowerCase();
 
-        if (searchedUser === "" || searchedPass === "") {
+    if (searchedUser === "" || searchedPass === "") {
 
-            return;
-        }
+      return;
+    }
 
-        console.log("The Searched email is: " + searchedUser);
+    console.log("The Searched email is: " + searchedUser);
 
-        // get request from the api
-        $.get("/api/" + searchedUser, function(data) {
+    // get request from the api
+    $.get("/api/" + searchedUser, function(data) {
 
-            if (!data) {
-                // No matching email in the database
-                $("#email_id").val("");
-                $("#pass_word").val("");
-                return;
-            }
-            if (data.pass_word === searchedPass) {
-                console.log("Correct password");
-                var mycookie = "username=" + data.email_id;
-                document.cookie = mycookie;
-                window.location = "/summary";
-            } else {
-                $("#pass_word").val("");
-            }
-
-        });
+      if (!data) {
+        // No matching email in the database
+        $("#email_id").val("");
+        $("#pass_word").val("");
+        return;
+      }
+      if (data.pass_word === searchedPass) {
+        console.log("Correct password");
+        var mycookie = "username=" + data.email_id;
+        document.cookie = mycookie;
+        window.location = "/summary";
+      } else {
+        $("#pass_word").val("");
+      }
 
     });
-    $(".modal-trigger").on("click", function() {
-        console.log('clicked trigger');
-        // alert("hey")
 
-        $('#modal1').modal({
-            dismissible: true, // Modal can be dismissed by clicking outside of the modal
-            opacity: .5, // Opacity of modal background
-            inDuration: 300, // Transition in duration
-            outDuration: 200, // Transition out duration
-            startingTop: '4%', // Starting top style attribute
-            endingTop: '10%', // Ending top style attribute
-            // ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
-            //   alert("Ready");
-            //   console.log(modal, trigger);
-            // },
-            // complete: function() {
-            //   alert('Closed');
-            // } // Callback for Modal close
-        });
+  });
+  $(".modal-trigger").on("click", function() {
+    console.log('clicked trigger');
+    // alert("hey")
+
+    $('#modal1').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 300, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      // ready: function(modal, trigger) { // Callback for Modal open. Modal and trigger parameters available.
+      //   alert("Ready");
+      //   console.log(modal, trigger);
+      // },
+      // complete: function() {
+      //   alert('Closed');
+      // } // Callback for Modal close
+    });
+  });
+
+  // when user clicks "Enroll"
+  //======================================================
+  $("#enrollBtn").on("click", function(event) {
+    event.preventDefault();
+
+    $('#modal1').modal({
+      dismissible: true, // Modal can be dismissed by clicking outside of the modal
+      opacity: .5, // Opacity of modal background
+      inDuration: 500, // Transition in duration
+      outDuration: 200, // Transition out duration
+      startingTop: '4%', // Starting top style attribute
+      endingTop: '10%', // Ending top style attribute
+      complete: function() {
+        console.log('modal sucess');
+      }
     });
 
-    // when user clicks "Enroll"
-    //======================================================
-    $("#enrollBtn").on("click", function(event) {
-        event.preventDefault();
-
-        $('#modal1').modal({
-          dismissible: true, // Modal can be dismissed by clicking outside of the modal
-          opacity: .5, // Opacity of modal background
-          inDuration: 500, // Transition in duration
-          outDuration: 200, // Transition out duration
-          startingTop: '4%', // Starting top style attribute
-          endingTop: '10%', // Ending top style attribute
-          complete: function() {
-            console.log('modal sucess');
-          }
-        });
-
-    });
+  });
 
 });
 
@@ -224,33 +224,33 @@ $(".formValidate").validate({
 //===============================================
 // TESTING FRAMEWORK
 var titleize = function(name) {
-    // Feel free to add more.
-    var titles = ["mr", "dr", "ms", "mrs"];
-    var names = name.split(" ");
+  // Feel free to add more.
+  var titles = ["mr", "dr", "ms", "mrs"];
+  var names = name.split(" ");
 
-    // Transform to guarantee consistency
-    for (var i = 0; i < names.length; i += 1) {
-        name = names[i];
+  // Transform to guarantee consistency
+  for (var i = 0; i < names.length; i += 1) {
+    name = names[i];
 
-        names[i] = titleCase(name.toLowerCase());
+    names[i] = titleCase(name.toLowerCase());
+  }
+
+  // Check if title needs transformation
+  var potentialTitle = names[0];
+  if (titles.includes(potentialTitle.toLowerCase())) {
+    var length = potentialTitle.length;
+
+    if (potentialTitle[length - 1] !== ".") {
+      names[0] = potentialTitle + ".";
     }
+  }
 
-    // Check if title needs transformation
-    var potentialTitle = names[0];
-    if (titles.includes(potentialTitle.toLowerCase())) {
-        var length = potentialTitle.length;
-
-        if (potentialTitle[length - 1] !== ".") {
-            names[0] = potentialTitle + ".";
-        }
-    }
-
-    return names.join(" ");
+  return names.join(" ");
 };
 
 // Helper function, to keep titleize nice and clean.
 function titleCase(name) {
-    return name.charAt(0).toUpperCase() + name.slice(1);
+  return name.charAt(0).toUpperCase() + name.slice(1);
 }
 
 module.exports = titleize;
